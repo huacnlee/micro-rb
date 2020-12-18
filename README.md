@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/amedeiros/micro-rb.svg?branch=master)](https://travis-ci.org/amedeiros/micro-rb) [![Gem Version](https://badge.fury.io/rb/micro-rb.svg)](https://badge.fury.io/rb/micro-rb)
+[![Test](https://github.com/huacnlee/micro-rb/workflows/Test/badge.svg)](https://github.com/huacnlee/micro-rb/actions) [![Gem Version](https://badge.fury.io/rb/micro-rb.svg)](https://badge.fury.io/rb/micro-rb)
 
 # MicroRb
 
@@ -27,10 +27,9 @@ Currently in development. If I can get some pull requests that would be much app
 
 ## Google Protobufs
 
-Currently supporting protobufs where each handler includes the module generated with requiring a Response and Request type. The example below is for the sum handler. 
+Currently supporting protobufs where each handler includes the module generated with requiring a Response and Request type. The example below is for the sum handler.
 
 `$ protoc --ruby_out=. sum.proto`
-
 
 ```proto
 syntax = "proto3";
@@ -98,7 +97,7 @@ MicroRb::Configuration.configure do |c|
   c.sidecar_host     = 'http://mysite.com'
   c.sidecar_port     = '8080'
   c.sidecar_registry = '/awesome_registry'
-  
+
   c.api_host  = 'http://mysite.com'
   c.api_port  = '8080'
   c.api_rpc   = '/awesome_micro_rb'
@@ -121,10 +120,8 @@ The `:rpc_method` must accept named parameters of `request:` and `response:`
 
 Every handler must include a prtobuf module that has `Request` and `Response` constanst generated from protoc.
 
-
 ![alt text](https://github.com/amedeiros/micro-rb/blob/master/registry.png)
 ![alt text](https://github.com/amedeiros/micro-rb/blob/master/sum.png)
-
 
 ## Micro API
 
@@ -166,7 +163,6 @@ Server: WEBrick/1.3.1 (Ruby/2.4.0/2016-12-24)
 {"result":{"total":3},"id":"1"}
 ```
 
-
 ```ruby
 result = MicroRb::Clients::Http.call(uri: 'http://0.0.0.0:3000', service: 'test', method: 'MyHandler.sum', params: {a:1, b:2})
 ap result
@@ -188,7 +184,6 @@ microrb <options>
     -a, --activerecord               Adds ActiveRecord to your gemfile and a default DB setup.
     -h, --help                       Display this help screen
 ```
-
 
 To generate a new micro service project run the following. Note this also adds [Symmetric Encryption](https://github.com/rocketjob/symmetric-encryption) gem with the -e flag.
 
@@ -226,8 +221,6 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/amedeiros/micro-rb. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
