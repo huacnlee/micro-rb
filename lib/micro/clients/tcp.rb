@@ -1,7 +1,7 @@
 # coding: utf-8
 # frozen_string_literal: true
 
-require 'celluloid/current'
+require 'celluloid'
 require 'celluloid/io'
 
 module MicroRb

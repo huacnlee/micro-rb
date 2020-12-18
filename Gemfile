@@ -5,8 +5,9 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in microrb.gemspec
 gemspec
 
+gem "rake"
 gem 'awesome_print'
 gem 'puma'
-gem 'rubocop', '~> 0.48.1', require: false
+gem 'rubocop'
 
 gem 'celluloid-io'
