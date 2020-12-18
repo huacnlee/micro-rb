@@ -9,5 +9,3 @@ gem "rake"
 gem 'awesome_print'
 gem 'puma'
 gem 'rubocop'
-
-gem 'celluloid-io'

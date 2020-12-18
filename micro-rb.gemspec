@@ -34,4 +34,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'semantic_logger', '~> 4.0', '>= 4.0.0'
   spec.add_runtime_dependency 'google-protobuf', '~> 3.3', '>= 3.3.0'
   spec.add_runtime_dependency 'celluloid', '~>0.17.3'
+  spec.add_runtime_dependency 'celluloid-io', '~>0.17.3'
 end
